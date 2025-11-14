@@ -1,6 +1,6 @@
-// ============================================
+
 // CUSTOM GLOWING CURSOR
-// ============================================
+
 
 const customCursor = document.getElementById('customCursor');
 
@@ -25,7 +25,7 @@ if (customCursor) {
     };
     animateCursor();
 
-    // Add hover effect on interactive elements
+    // Hover effect on interactive elements
     const interactiveElements = document.querySelectorAll('a, button, .cta-button, .nav-link, .contact-item, .expertise-item, .skill-item, .timeline-content');
     
     interactiveElements.forEach(element => {
@@ -38,9 +38,7 @@ if (customCursor) {
     });
 }
 
-// ============================================
 // NAVIGATION FUNCTIONALITY
-// ============================================
 
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
@@ -53,7 +51,6 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -61,7 +58,6 @@ navLinks.forEach(link => {
     });
 });
 
-// Sticky navbar with glow effect on scroll
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
@@ -70,9 +66,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ============================================
 // SMOOTH SCROLLING
-// ============================================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -88,9 +82,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ============================================
 // SKILL BARS ANIMATION
-// ============================================
 
 const animateSkillBars = () => {
     const skillProgresses = document.querySelectorAll('.skill-progress');
@@ -116,9 +108,7 @@ const animateSkillBars = () => {
 // Initialize skill bars animation
 animateSkillBars();
 
-// ============================================
 // SCROLL ANIMATIONS
-// ============================================
 
 const animateOnScroll = () => {
     const elements = document.querySelectorAll('.timeline-item, .education-card, .skills-category, .about-content, .expertise-item');
@@ -146,9 +136,7 @@ const animateOnScroll = () => {
 // Initialize scroll animations
 animateOnScroll();
 
-// ============================================
 // ACTIVE NAVIGATION LINK HIGHLIGHTING
-// ============================================
 
 const updateActiveNavLink = () => {
     const sections = document.querySelectorAll('section[id]');
@@ -172,10 +160,6 @@ const updateActiveNavLink = () => {
 
 window.addEventListener('scroll', updateActiveNavLink);
 
-// ============================================
-// CONTACT ITEMS HOVER EFFECT ENHANCEMENT
-// ============================================
-
 const contactItems = document.querySelectorAll('.contact-item');
 contactItems.forEach(item => {
     item.addEventListener('mouseenter', function() {
@@ -187,10 +171,6 @@ contactItems.forEach(item => {
     });
 });
 
-// ============================================
-// PARALLAX EFFECT FOR HERO BACKGROUND
-// ============================================
-
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroBackground = document.querySelector('.hero-background');
@@ -199,10 +179,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ============================================
-// PRELOADER (MINIMAL)
-// ============================================
-
 window.addEventListener('load', () => {
     document.body.style.opacity = '1';
     document.body.style.transition = 'opacity 0.5s ease';
@@ -210,4 +186,5 @@ window.addEventListener('load', () => {
 
 // Set initial opacity
 document.body.style.opacity = '0';
+
 
