@@ -7,14 +7,6 @@ Design Features
 - Color Palette: Red (#ff2e2e, #e50914), white, and black/dark gray accents
 - Typography: Orbitron (headings) and Poppins (body text)
 
-Project Structure
-
-portfolio-website/
-├── index.html      # Main HTML structure
-├── styles.css      # All styling and animations
-├── script.js       # Interactive functionality
-└── README.md       # This file
-
 Features
 
 This static portfolio is under development. More interactive features and future projects will be added soon to better showcase my skills and work.
@@ -53,3 +45,4 @@ Technologies Used
 - JavaScript - Interactivity
 
 This portfolio website has been created by Kobe Bryan Omblero to showcase my work, skills, and projects. All content and design elements are the intellectual property of the author. Thank you for visiting, and I hope you found it insightful.
+
