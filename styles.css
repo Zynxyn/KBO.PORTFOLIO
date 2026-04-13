@@ -1,5 +1,5 @@
 
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -444,10 +444,49 @@ section {
     color: var(--text-gray);
     font-weight: 300;
     margin-bottom: 1.5rem;
+    text-align: justify;
 }
 
 .about-text:last-child {
     margin-bottom: 0;
+}
+
+.resume-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.85rem 1.8rem;
+    border: 2px solid var(--primary-red);
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 16px rgba(255, 46, 46, 0.25);
+}
+
+.resume-link:hover {
+    background-color: var(--primary-red);
+    color: var(--white);
+    box-shadow: 0 0 24px rgba(255, 46, 46, 0.55);
+    transform: translateY(-2px);
+}
+
+.resume-link.resume-link-disabled {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-gray);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.75;
+}
+
+.resume-link.resume-link-disabled:hover {
+    background-color: transparent;
+    color: var(--text-gray);
+    box-shadow: none;
+    transform: none;
 }
 
 .expertise {
@@ -857,6 +896,11 @@ section {
 
     .about-text-wrapper {
         text-align: center;
+    }
+
+    .resume-link {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .profile-image {

@@ -187,4 +187,27 @@ window.addEventListener('load', () => {
 // Set initial opacity
 document.body.style.opacity = '0';
 
+// RESUME LINK VALIDATION
+const resumeLink = document.getElementById('resumeLink');
+
+if (resumeLink) {
+    fetch(resumeLink.getAttribute('href'), { method: 'HEAD' })
+        .then((response) => {
+            if (!response.ok) {
+                resumeLink.classList.add('resume-link-disabled');
+                resumeLink.textContent = 'Resume Coming Soon';
+                resumeLink.removeAttribute('href');
+                resumeLink.removeAttribute('target');
+                resumeLink.setAttribute('aria-disabled', 'true');
+            }
+        })
+        .catch(() => {
+            resumeLink.classList.add('resume-link-disabled');
+            resumeLink.textContent = 'Resume Coming Soon';
+            resumeLink.removeAttribute('href');
+            resumeLink.removeAttribute('target');
+            resumeLink.setAttribute('aria-disabled', 'true');
+        });
+}
+
 
